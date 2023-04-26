@@ -93,7 +93,7 @@ The Fourier Domain has some really nice properties.
 [Transforms and Convolutions](https://www.youtube.com/watch?v=mOiY1fOROOg)
 [Parsevals Theorum](https://www.youtube.com/watch?v=mOiY1fOROOg)
 
-## 2. Discrete Fourier Transfomr (DFT) and Fast Fourier Transform (FFT) <a name="dftfft"></a>
+## 2. Discrete Fourier transform (DFT) and Fast Fourier Transform (FFT) <a name="dftfft"></a>
 
 Generally speaking, in the real world, with us normies. We don't have any process that is continuous. So we have to take it in discrete amounts. This isn't a problem with the Fourier Transformation.
 
@@ -101,7 +101,7 @@ If we have a function, $f$ and we take n number of samples points, each point be
 
 However, this is computationally VERY expensive, taking $O(n^2)$ time. 
 
-The Fast Fourier Transformation, takes $O(nlog(n))$ time and is very efficent. I won't go into how it's done or derrived, or even the math behind it (I'm still not sure) but it's used EVERYWHERE.
+The Fast Fourier Transformation, takes $O(nlog(n))$ time and is very efficient. I won't go into how it's done or derived, or even the math behind it (I'm still not sure) but it's used EVERYWHERE.
 
 ##### example 2.1 Noise filtering with FFT
 
@@ -138,7 +138,7 @@ plot(freq(L),PSDclean(L),’-b’,’LineWidth’,1.2)
 legend(’Noisy’,’Filtered’)
 ```
 
-##### example 2.2 spectrial derivatives
+##### example 2.2 spectral derivatives
 
 ```matlab
 n = 128;
@@ -167,7 +167,7 @@ plot(x,dfFFT,’r--’,’LineWidth’,1.2)
 legend(’True Derivative’,’Finite Diff.’,’FFT Derivative’)
 ```
 
-###### Links
+###### Videos
 
 [Overview of DFT Video](https://www.youtube.com/watch?v=nl9TZanwbBk)
 [Computing the DFT](https://www.youtube.com/watch?v=Xw4voABxU5c)
@@ -177,8 +177,31 @@ legend(’True Derivative’,’Finite Diff.’,’FFT Derivative’)
 
 ## 3. Transforming Partial Differential Equations <a name="difeq"></a>
 
+Ignoring for now, man....I need to come back to this and really get better at it
+
+##### Videos
+
+[Solving the Heat Equation](https://www.youtube.com/watch?v=7haZCrQDHpA)
+[Solving PDE with Python (1)](https://www.youtube.com/watch?v=hDeARtZdq-U)
+[Solving PDE with Python (2)](https://www.youtube.com/watch?v=mMdIxa5qC9Y)
+
 ## 4. Gabor Transform and the Spectrogram <a name="Gabor"></a>
+
+###### Videos
+
+[Spectrogram](https://www.youtube.com/watch?v=EfWnEldTyPA)
+[Uncertaintiy PRinciples](https://www.youtube.com/watch?v=EfWnEldTyPA)
 
 ## 5. Wavelets and Multi-Resolution Analysis <a name="wavelets"></a>
 
-## 6. 2D transforms and Image Processing <a name="image"></a>``
+##### Videos
+
+[Wavelets and Multi-Resolution Analysis](https://www.youtube.com/watch?v=y7KLbd7n75g)
+
+## 6. 2D transforms and Image Processing <a name="image"></a>
+
+##### Videos
+
+[Image compression](https://www.youtube.com/watch?v=gGEBUdM0PVc)
+[Laplace transformation](https://www.youtube.com/watch?v=7UvtU75NXTg)
+[Differential Equations](https://www.youtube.com/watch?v=iBde8qOW0h0)
