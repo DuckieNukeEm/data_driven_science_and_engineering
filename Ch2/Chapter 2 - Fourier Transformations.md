@@ -187,6 +187,22 @@ Ignoring for now, man....I need to come back to this and really get better at it
 
 ## 4. Gabor Transform and the Spectrogram <a name="Gabor"></a>
 
+A limitation of of the Fourtier transformation is that it doesn't tell you *when* in time a frequency occures. Recall, up to this point, we were using fixed length or repeating sequences in which knowing in time when that occures isn't needed. But it does become important when we start to consider systems that evolve over time. i.e. music. So, we have the Gabor transofmration. 
+
+The theory is very straight forward. We will just have a sliding window, at each point $\tau$ , we'll have a window of that starts at $t-a$ and ends at $t+a$, and then run the Four Transofmration over that window. Then we'll shift the window over a little, and rerun that at $\tau + 1$, and repeat.  
+
+<img src="file:///home/asmodi/.config/marktext/images/2023-04-30-10-40-34-Gabor%20window.png" title="" alt="" width="605">
+
+So, the (what I am calling) the Gabor, $g_{t,\omega}(\tau)$ is the localized area, and is defined as: $g_{t,\omega}=e^{i\omega\tau}g(\tau - t)$
+
+$G(f)(t,\omega) = \hat f_g(t,\omega)=\int_{-\infin}^\infin f(\tau)e^{-i\omega \tau}\bar g(\tau - t)d\tau = <f,g_{t,\omega}> $
+
+ $g_{t,\omega}$ is called the kernel, and is written as: $g_{t,\omega}=e^{i\omega\tau}g(\tau - t)$, with $g(t)$, called the kernal, usually set as $g(t)=e^{-\frac{(t-\tau)^2}{a^2}}$, which ultimatly gives us 
+
+$G(f)(t,\omega) = \hat f_g(t,\omega)=\int_{-\infin}^\infin f(\tau)e^{-\frac{t^2}{a^2}}d\tau$ 
+
+This isn't bad. You can see we evaluate function at $\tau$, given time step $t$, 
+
 ###### Videos
 
 [Spectrogram](https://www.youtube.com/watch?v=EfWnEldTyPA)
